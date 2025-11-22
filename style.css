@@ -3,11 +3,13 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
 }
+
 
 /* Layout */
 
@@ -15,6 +17,7 @@ section {
   float: left;
   width: 50%;
 }
+
 
 aside {
   float: left;
@@ -43,3 +46,94 @@ header, footer {
 
 /* WRITE YOUR styling/typesetting CSS code BELOW HERE */
 
+body {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+
+li {
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Links */
+
+a:link {
+  color: #a66;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #997777;
+}
+
+a:hover {
+  color: #cc7777;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #cc7777;
+  outline: 2px solid #cc7777; 
+  outline-offset: 2px;
+}
+
+
+/* Layout */
+
+section h1 + p,
+section h2 + p,
+section h3 + p{
+  text-indent: 1.5rem;
+}
+
+/* lists */
+
+ul, ol {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+nav ul, nav ol {
+  padding-left: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  nav ul {
+
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li a {
+    /* Ensure full width on small screens */
+    width: 100%;
+    border-bottom: 1px solid #444; /* Add dividers for stacked items */
+  }
+}
