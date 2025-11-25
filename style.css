@@ -1,4 +1,7 @@
-/* remove thic comment to add @import font or CSS variables at the top of this file */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -46,7 +49,10 @@ header, footer {
 
 /* WRITE YOUR styling/typesetting CSS code BELOW HERE */
 
+/* changed nav bar above and down below */
+
 body {
+  font-family: "Lora", serif;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: normal;
@@ -88,7 +94,7 @@ a:link {
 }
 
 a:visited {
-  color: #997777;
+  color: #A277CC;
 }
 
 a:hover {
@@ -100,6 +106,21 @@ a:focus {
   color: #cc7777;
   outline: 2px solid #cc7777; 
   outline-offset: 2px;
+}
+
+section a[href^="http"]::after,
+section a[href^="https"]::after {
+  content: url("external-link-52.png"); 
+  
+  display: inline-block; 
+  width: .7rem;       
+  height: .7rem;      
+  margin-left: -.7rem;
+  margin-right: 2rem;
+  
+  vertical-align: text-top;
+
+  transform: scale3d(0.5, 0.5, 1);  
 }
 
 
@@ -119,21 +140,53 @@ ul, ol {
   padding-left: 1.5rem;
 }
 
+nav {
+  position: initial;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: block;
+  justify-content: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #a66;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+nav ul li a:hover {
+  background-color: #cc7777;
+}
+
+
+nav a:link {
+  color: white; 
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: white; 
+}
+
+nav a:hover {
+  text-decoration: underline; 
+}
+
+nav a:focus {
+  outline: 2px solid #CC7777; 
+  outline-offset: 2px;
+}
+
+
 nav ul, nav ol {
   padding-left: 0;
 }
 
 
-@media screen and (max-width: 600px) {
-  nav ul {
-
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul li a {
-    /* Ensure full width on small screens */
-    width: 100%;
-    border-bottom: 1px solid #444; /* Add dividers for stacked items */
-  }
-}
